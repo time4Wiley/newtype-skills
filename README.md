@@ -19,6 +19,8 @@ A collection of AI prompt skills for analysis, writing, fact-checking, editing, 
 
 ## Skills Overview
 
+### Core Skills
+
 | Skill | Description | Use Cases |
 |-------|-------------|-----------|
 | **[Super Analyst](./skills/super-analyst/SKILL.md)** | 12 analysis frameworks + systematic research methodology | Strategic analysis, competitive research, investment decisions, root cause diagnosis |
@@ -26,6 +28,14 @@ A collection of AI prompt skills for analysis, writing, fact-checking, editing, 
 | **[Super Fact-Checker](./skills/super-fact-checker/SKILL.md)** | Systematic verification: claim extraction, source credibility, annotation | Content review, source validation, accuracy assurance |
 | **[Super Editor](./skills/super-editor/SKILL.md)** | 4-layer editing: structure → paragraph → sentence → word | Draft polishing, readability improvement, consistency |
 | **[Super Interviewer](./skills/super-interviewer/SKILL.md)** | Dialogue techniques: open questions, 5 whys, Socratic method | Brainstorming, requirement gathering, deep exploration |
+
+### Specialized Skills
+
+| Skill | Description | Use Cases |
+|-------|-------------|-----------|
+| **[Dual-Model Analyze](./skills/dual-model-analyze/SKILL.md)** | Parallel analysis using GPT-5.2 + Gemini 3 Pro with synthesis | Data analysis, cross-validation, high-stakes decisions |
+| **[Meeting Digest](./skills/meeting-digest/SKILL.md)** | Meeting transcript processor with dual-model insight extraction | Meeting notes processing, decision tracking, panorama updates |
+| **[Project Sync Pack](./skills/project-sync-pack/SKILL.md)** | Visual deliverables generator (PPTX + PNG) from markdown | Presentation generation, infographic creation, visual reporting |
 
 ---
 
@@ -157,6 +167,59 @@ You can also add these prompts to:
 - "Help me think through this product idea using Socratic method"
 - "Interview me to understand my real requirements"
 - "Challenge my assumptions about this business plan"
+
+---
+
+### Dual-Model Analyze
+
+**Best for**: Data analysis requiring cross-validation, high-stakes decisions
+
+**Features**:
+- Runs GPT-5.2 (high reasoning) and Gemini 3 Pro (high thinking) in parallel
+- Synthesizes outputs highlighting agreement and divergence
+- Uses uv inline script metadata for zero-setup execution
+- Requires `OPENAI_API_KEY` and `GEMINI_API_KEY` environment variables
+
+**Example prompts**:
+- "Analyze the correlation between API response times and error rates"
+- "Compare the competitive landscape of LLM API providers in 2026"
+- "Analyze time complexity and bottlenecks in this algorithm"
+
+---
+
+### Meeting Digest
+
+**Best for**: Processing meeting transcripts, tracking decisions and todos
+
+**Features**:
+- Extracts decisions, todos, insights, team changes from transcripts
+- Supports .docx, .txt, or pasted text input
+- Optional dual-model analysis for deeper insight extraction
+- Diffs against existing panorama markdown
+- Produces annotated updates with change tracking
+
+**Example prompts**:
+- "Process this meeting transcript and update the panorama"
+- "Extract decisions and todos from these meeting notes"
+- "Update the master doc with the latest discussion"
+
+---
+
+### Project Sync Pack
+
+**Best for**: Generating presentations and infographics from markdown
+
+**Features**:
+- Reads master panorama markdown and regenerates PPTX + PNG
+- PptxGenJS with crimson/gold design system
+- Pillow dual-font renderer for mobile-friendly PNG
+- Optional dual-model quality review before generation
+- Visual QA with screenshot verification
+
+**Example prompts**:
+- "Generate PPTX and PNG from the panorama markdown"
+- "Refresh all visual deliverables"
+- "Update the presentation with latest content"
 
 ---
 
