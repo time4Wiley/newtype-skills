@@ -1,0 +1,26 @@
+{
+  "name": "newtype-skills",
+  "owner": {
+    "name": "huangyihe",
+    "url": "https://newtype.pro/"
+  },
+  "metadata": {
+    "description": "AI prompt skills for analysis, writing, fact-checking, editing, and interviewing. Methodology-driven prompts with 12 analysis frameworks, 6 writing methodologies, and systematic verification workflows.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "newtype-skills",
+      "description": "Collection of methodology-driven AI prompt skills including Super Analyst (12 analysis frameworks), Super Writer (6 writing methodologies), Super Fact-Checker (systematic verification), Super Editor (4-layer editing), and Super Interviewer (Socratic dialogue techniques). All skills are in Chinese (简体中文) with universal frameworks.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/super-analyst",
+        "./skills/super-writer",
+        "./skills/super-fact-checker",
+        "./skills/super-editor",
+        "./skills/super-interviewer"
+      ]
+    }
+  ]
+}
